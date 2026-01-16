@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+
+	// Cordinates of the two points
+	float x1 = 5, y1= 4;
+	float x2 = 3, y2 =2;
+
+	// Calculating the slope
+	float slope = (y2 -y1) / (x2 - x1);
+
+	// Displaying the result with 3 decimal places
+	printf("The slope of the line passing through points (%.1f, %.1f) and (%.1f, %.1f) is: %.3f\n", x1, y1, x2, y2, slope);
+
+system("pause");
+
+return 0;
+}

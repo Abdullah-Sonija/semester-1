@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+	float fuelAverage, totalFuelConsumed, totalCost;
+	
+	// Distance between point A and B (one-way)
+	float distance = 1207.0;
+
+	// Fuel price during forward trip (per liter)
+	float fuelPriceForward = 118.0;
+
+	// Fuel price during return trip (per liter)
+	float fuelPriceReturn = 123.0;
+
+	// Taking fuel average as input and ensuring it's positive
+	do {
+		printf("Enter your car's fuel average (KM per liter): ");
+		scanf("%f", &fuelAverage);
+		
+		if (fuelAverage <= 0) {
+		printf("Fuel average must be a positive value. Please try again.\n");
+
+		}
+	} while (fuelAverage <= 0);
+
+		// Calculating total fuel consumed (both ways)
+		totalFuelConsumed = (2 * distance) / fuelAverage;
+
+		// Calculating total cost
+		totalCost = (distance / fuelAverage * fuelPriceForward) + (distance / fuelAverage * fuelPriceReturn);
+
+	// Displaying the total fuel consumption and total fuel cost
+	printf("Total fuel consumed for the trip: %.2f liters\n", totalFuelConsumed);
+	printf("Total fuel cost for the trip: %.2f\n", totalCost);
+
+	system("pause");
+
+	return 0;
+}

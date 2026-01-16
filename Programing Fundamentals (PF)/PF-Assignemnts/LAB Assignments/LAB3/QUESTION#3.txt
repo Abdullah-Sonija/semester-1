@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+
+	float salary, taxRate, taxAmount, netSalary;
+	
+	// Taking salary and tax rate as input from the user
+	printf("Enter your salary: ");
+	scanf("%f", &salary);
+
+	printf("Enter the tax rate (in percentage): ");
+	scanf("%f", &taxRate);
+
+	// Calculating the tax amount
+	taxAmount = (taxRate / 100) * salary;
+
+	// Calculating net salary after paying tax
+	netSalary = salary - taxAmount;
+
+	// Displaying the calculated tax and net salary
+	printf("You need to pay a tax of: %.3f\n", taxAmount);
+	printf("Your salary after tax is: %.3f\n", netSalary);
+
+	system("pause");
+
+return 0;
+}
